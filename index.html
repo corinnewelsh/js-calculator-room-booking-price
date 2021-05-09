@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Room Booking Price Calculator</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="left-side">
+                <div class="form-container">
+                    <h1>Room Booking Price</h1>
+
+                    <form>
+                        <fieldset class="radio-field">
+                            <legend class="question">Booking type</legend>
+                            <label class="radio"><input type="radio" name="rate" value="communitygroup">Community Group</label>
+                            <label class="radio"><input type="radio" name="rate" value="voluntaryorganisation">Voluntary Organisation</label>
+                            <label class="radio"><input type="radio" name="rate" value="publicsector">Public Sector</label>
+                            <label class="radio"><input type="radio" name="rate" value="commercialprivatehire">Commercial or Private Hire</label>
+                        </fieldset>
+
+                        <fieldset class="radio-field">
+                            <legend class="question">Room size</legend>
+                            <label class="radio"><input type="radio" name="room" value="hall">Hall</label>
+                            <label class="radio"><input type="radio" name="room" value="meetingsinglesmall">Meeting Room (14 people)</label>
+                            <label class="radio"><input type="radio" name="room" value="meetingsinglelarge">Meeting Room (18 people)</label>
+                            <label class="radio"><input type="radio" name="room" value="meetingdouble">Meeting Room (28 people)</label>
+                            <label class="radio"><input type="radio" name="room" value="meetingtriple">Meeting Room (42 people)</label>
+                        </fieldset>
+
+                        <fieldset class="radio-field">
+                            <legend class="question">Day of the week</legend>
+                            <label class="radio"><input type="radio" name="day" value="weekday">Monday to Friday</label>
+                            <label class="radio"><input type="radio" name="day" value="weekendholiday">Saturday, Sunday, and Public Holidays</label>
+                        </fieldset>
+
+                        <div class="question">
+                            <label for="hours">Number of hours</label>
+                            <input id="hours" type="number" min="1" max="12">
+                        </div>
+
+                        <div>
+                            <button id="calculate" type="button">Calculate</button>
+                        </div>
+                    </form>
+
+                    <div id="result">Your quote is: £<span id="total"></span></div>
+                </div>
+            </div>
+
+            <div class=right-side>
+                <div class="photo-container">
+                    <img class="photo1" src="ripple-centre-quiz-night-large-meeting-room.jpg" alt="At the Ripple Centre: people gathered round tables laughing with lively quiz host.">
+                    <img class="photo2" src="ripple-centre-yoga-class-small-meeting-room.jpg" alt-"At the Ripple Centre: in a room with a red wall at one end, women practise yoga on blue mats where there is a bunch of pink hyacinths on the floor.">
+                    <img class="photo3" src="ripple-centre-social-club-hall.jpg" alt="At the Ripple Centre: in a traditional school-or-church-type hall, older people sit around a table playing a game with boards and counters.">
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
